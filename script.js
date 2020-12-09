@@ -47,7 +47,7 @@ function create_user_card(user) {
 }
 
 function add_repos_to_card(repos) {
-    const repos_elem = document.getElementById("repos");
+    const repos_div= document.getElementById("repos");
     console.log(repos);
     repos.forEach(repo => {
         // if (repo.homepage) { // just the ones with github pages (or webpage)
@@ -58,7 +58,8 @@ function add_repos_to_card(repos) {
             repo_elem.target = "_blank";
             repo_elem.innerText = repo.name;
 
-            repos_elem.appendChild(repo_elem);
+
+            repos_div.appendChild(repo_elem);
         // }
     })
 }
