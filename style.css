@@ -46,7 +46,23 @@ input:focus {
 
 .avatar {
     border-radius: 50%;
-    height: 11rem;
-    width: 11rem;
-    margin: 1.2rem 4rem 0rem 0rem;
+    height: 12rem;
+    width: 12rem;
+    margin: 2.5rem 4rem 0rem 0rem;
+}
+
+#repos {
+    padding: 1em 0em;
+}
+
+.repo {
+    background-color: #444;
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
 }

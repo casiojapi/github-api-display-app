@@ -11,6 +11,14 @@ async function get_user(username) {
     const resp_data = await resp.json();
 
     create_user_card(resp_data);
+    get_repos(username);
+}
+
+async function get_repos(username) {
+    const resp = await fetch(APIURL + username +  "/repos");
+    const resp_data = await resp.json();
+
+    add_repos_to_card(resp_data);
 }
 
 function create_user_card(user) {
@@ -35,8 +43,24 @@ function create_user_card(user) {
             </div>
         </div>
     `;
-
     main.innerHTML = cardHTML;
+}
+
+function add_repos_to_card(repos) {
+    const repos_elem = document.getElementById("repos");
+    console.log(repos);
+    repos.forEach(repo => {
+        // if (repo.homepage) { // just the ones with github pages (or webpage)
+            const repo_elem = document.createElement('a');
+
+            repo_elem.classList.add("repo");
+            repo_elem.href = repo.homepage;
+            repo_elem.target = "_blank";
+            repo_elem.innerText = repo.name;
+
+            repos_elem.appendChild(repo_elem);
+        // }
+    })
 }
 
 form.addEventListener("submit", (e) => {
