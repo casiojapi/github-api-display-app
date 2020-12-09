@@ -1,1 +1,1 @@
-# [github api app test](https://maximop2p.github.io/github-api-test-app/)
+# [github api display app](https://maximop2p.github.io/github-api-display-app/)
