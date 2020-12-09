@@ -28,10 +28,10 @@ function create_user_card(user) {
     const cardHTML = `
         <div class="card">
             <div>
-                <img class="avatar" src="${user.avatar_url}" alt="${user.name}" />
+                <a target="_blank" href="https://github.com/${user.login}"><img class="avatar" src="${user.avatar_url}" alt="${user.name}" /></a>
             </div>
             <div class="user-info">
-                <h2>${user.name}</h2>
+                <a target="_blank" href="https://github.com/${user.login}"><h2>${user.name}</h2></a>
                 <p>${user.bio}</p>
 
                 <ul class="info">
