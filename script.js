@@ -9,16 +9,13 @@ get_user("maximop2p");
 async function get_user(username) {
     const resp = await fetch(APIURL + username);
     const resp_data = await resp.json();
-
     create_user_card(resp_data);
     get_repos(username);
 }
 
 async function get_repos(username) {
-
-    const resp = await fetch(APIURL + username +  "/repos");
+    const resp = await fetch(APIURL + username + "/repos");
     const resp_data = await resp.json();
-
     add_repos_to_card(resp_data);
 }
 
